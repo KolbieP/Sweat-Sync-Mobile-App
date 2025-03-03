@@ -5,14 +5,8 @@ export default function ProfileScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Profile screen</Text>
-      <Link href="/profile/profile?person=arlin" style={styles.button}>
-        Go to Profile screen - Arlin
-      </Link>
-      <Link href="/profile/profile?person=craig" style={styles.button}>
-        Go to Profile screen - Craig
-      </Link>
-      <Link href="/profile/profile?person=mike" style={styles.button}>
-        Go to Profile screen - Mike
+      <Link href="/profile/myprofile/" style={styles.button}>
+        Go to Profile screen 
       </Link>
       <Link href="/profile/settings/" style={styles.button}>
         Go to Settings Screen

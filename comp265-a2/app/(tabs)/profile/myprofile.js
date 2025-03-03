@@ -1,17 +1,13 @@
 import { Text, View, StyleSheet } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { useLocalSearchParams } from "expo-router";
 
-export default function Index() {
 
-  const focused = true;
-  const color = '#ff3300';
+export default function MyprofileScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Home screen</Text>
-      <View style={styles.iconContainer}><Ionicons name={focused ? 'home' : 'home-outline'} color={color} size={24} /></View>
-      <Text style={styles.text}>Welcome to the home screen!</Text>
-      <Text style={styles.text}>Explore the app and enjoy your stay.</Text>
+      <Text style={styles.header}>Profile</Text>
     </View>
   );
 }
@@ -33,6 +29,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     marginBottom: 10,
+  },
+  button: {
+    fontSize: 20,
+    textDecorationLine: 'underline',
+    color: '#fff',
   },
   iconContainer: {
     padding: 10, 

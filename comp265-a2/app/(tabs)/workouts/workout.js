@@ -1,15 +1,14 @@
 import { Text, View, StyleSheet } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
-export default function SettingsScreen() {
+export default function WorkoutScreen() {
 
   const focused = true;
   const color = '#ff3300';
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Settings</Text>
-      <View style={styles.iconContainer}><Ionicons name={focused ? 'settings' : 'settings-outline'} color={color} size={24} /></View>
+      <Text style={styles.header}>Log Workouts screen</Text>
     </View>
   );
 }
@@ -18,8 +17,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#25292e',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   header: {
     fontSize: 32,
@@ -31,11 +30,6 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     marginBottom: 10,
-  },
-  button: {
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#fff',
   },
   iconContainer: {
     padding: 10, 

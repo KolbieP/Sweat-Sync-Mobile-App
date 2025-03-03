@@ -1,15 +1,15 @@
 import { Text, View, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 
-export default function NotesScreen() {
+export default function WorkoutsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Notes screen</Text>
-      <Link href="/notes/home/" style={styles.button}>
-        Go to Home Screen
+      <Text style={styles.text}>Workout screen</Text>
+      <Link href="/workouts/workout/" style={styles.button}>
+        Go to Log Workouts Screen
       </Link>
-      <Link href="/notes/details/" style={styles.button}>
-        Go to Details Screen
+      <Link href="/workouts/gym/" style={styles.button}>
+        Go to Gym Workouts Screen
       </Link>
     </View>
   );

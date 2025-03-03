@@ -17,22 +17,32 @@ export default function TabLayout() {
             }}
         >
             <Tabs.Screen
+                name="home"
+                options={{
+                    title: 'Home',
+                    headerShown: false,
+                    tabBarIcon: ({ color, focused }) => (
+                        <Ionicons name={focused ? 'home' : 'home-outline'} color={color} size={24} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="workouts"
+                options={{
+                    title: 'Workouts',
+                    headerShown: false,
+                    tabBarIcon: ({ color, focused }) => (
+                        <Ionicons name={focused ? 'barbell' : 'barbell-outline'} color={color} size={24} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
                 name="profile"
                 options={{
                     title: 'Profile',
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
                         <Ionicons name={focused ? 'person' : 'person-outline'} color={color} size={24} />
-                    ),
-                }}
-            />
-            <Tabs.Screen
-                name="notes"
-                options={{
-                    title: 'Notes',
-                    headerShown: false,
-                    tabBarIcon: ({ color, focused }) => (
-                        <Ionicons name={focused ? 'document-text' : 'document-text-outline'} color={color} size={24} />
                     ),
                 }}
             />

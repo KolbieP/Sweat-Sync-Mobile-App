@@ -9,9 +9,6 @@ export default function DetailsScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Details screen</Text>
-      <View style={styles.iconContainer}><Ionicons name={focused ? 'information-circle' : 'information-circle-outline'} color={color} size={24} /></View>
-      <Text style={styles.text}>Here are the details you need to know.</Text>
-      <Text style={styles.text}>Feel free to explore more information.</Text>
     </View>
   );
 }
