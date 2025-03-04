@@ -18,7 +18,7 @@ export default function HomeScreen() {
   useEffect(() => {
     const interval = setInterval(() => {
       setTipIndex((prevIndex) => (prevIndex + 1) % tips.length);
-    }, 5000); // Change every 5 seconds
+    }, 4000); // Change every 5 seconds
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 

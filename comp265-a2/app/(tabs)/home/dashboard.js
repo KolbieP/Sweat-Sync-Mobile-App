@@ -10,6 +10,7 @@ export default function DashboardScreen() {
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.header}>Fitness Dashboard</Text>
       <Text style={styles.text}>Track your progress, stay motivated, and achieve your fitness goals.</Text>
+      <View style={styles.iconContainer}><Ionicons name="fitness" color="#ff3300" size={32} /></View>
       <Text style={styles.text}>Current fitness status:</Text>
       <View style={styles.card}>
         <Text style={styles.header2}>Training Status</Text>
@@ -77,6 +78,11 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   iconContainer: {
-    padding: 10, 
+    backgroundColor: '#41474D',
+    padding: 10,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 10,
   },
 });

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TextInput, Button, ScrollView, TouchableOpacity, Image, KeyboardAvoidingView, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import logo from '../../../assets/blue-logo.png';
 
 export default function WorkoutScreen() {
@@ -16,7 +16,30 @@ export default function WorkoutScreen() {
   const [notes, setNotes] = useState("");
 
   useEffect(() => {
-    console.log("Workouts updated:", workouts);
+    const loadWorkouts = async () => {
+      try {
+        const storedWorkouts = await AsyncStorage.getItem('workouts');
+        if (storedWorkouts) {
+          setWorkouts(JSON.parse(storedWorkouts));
+        }
+      } catch (error) {
+        console.error("Failed to load workouts", error);
+      }
+    };
+
+    loadWorkouts();
+  }, []);
+
+  useEffect(() => {
+    const saveWorkouts = async () => {
+      try {
+        await AsyncStorage.setItem('workouts', JSON.stringify(workouts));
+      } catch (error) {
+        console.error("Failed to save workouts", error);
+      }
+    };
+
+    saveWorkouts();
   }, [workouts]);
 
   const handleDeleteWorkout = (id) => {
@@ -79,6 +102,7 @@ export default function WorkoutScreen() {
                 <Picker.Item label="Upper Body Workout" value="Upper Body Workout" />
                 <Picker.Item label="Lower Body Workout" value="Lower Body Workout" />
                 <Picker.Item label="Core Workout" value="Core Workout" />
+                <Picker.Item label="Cardio and Core" value="Cardio and Core" />
                 <Picker.Item label="Flexibility and Stretching" value="Flexibility and Stretching" />
                 <Picker.Item label="Run" value="Run" />
                 <Picker.Item label="Walk" value="Walk" />

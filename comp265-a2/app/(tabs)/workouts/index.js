@@ -6,7 +6,6 @@ import logo from '../../../assets/blue-logo.png';
 
 export default function WorkoutsScreen() {
 
-  const focused = true;
   const color = '#ff3300';
 
   return (
@@ -17,7 +16,7 @@ export default function WorkoutsScreen() {
       <Image source={image} style={styles.image} />
       <View style={styles.card}>
         <Text style={styles.header2}>Log Your Workout</Text>
-        <View style={styles.iconContainer}><Ionicons name="create-outline" color={color} size={24} /></View>
+        <View style={styles.iconContainer}><Ionicons name="create" color={color} size={24} /></View>
         <Text style={styles.text}>Keep a detailed record of your workouts to monitor your progress and stay motivated. Click below to log a new workout session.</Text>
         <Link href="/workouts/workout/" style={styles.button}>
           Log Workout

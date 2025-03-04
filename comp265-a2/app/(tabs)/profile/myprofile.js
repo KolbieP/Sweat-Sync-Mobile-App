@@ -1,23 +1,81 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, ScrollView } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useLocalSearchParams } from "expo-router";
-
 
 export default function MyprofileScreen() {
 
+  const color = '#ff3300';
+
+  let firstName = 'Alec'
+  let lastName = 'Garner'
+  let birthday = 'January 1 1990'
+  let email = 'alecgarner@gmail.com'
+  let location = 'Preston'
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Profile</Text>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.header}>My Profile</Text>
+      <View style={styles.iconContainer}><Ionicons name="person" color={color} size={80} /></View>
+      <View style={styles.row}>
+        <Text style={styles.text}>First Name</Text>
+        <Text style={styles.text2}>{firstName}</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Last Name</Text>
+        <Text style={styles.text2}>{lastName}</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Birthday</Text>
+        <Text style={styles.text2}>{birthday}</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Email</Text>
+        <Text style={styles.text2}>{email}</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Home Location</Text>
+        <Text style={styles.text2}>{location}</Text>
+      </View>
+      <Text style={styles.header2}>Activity Summary:</Text>
+      <View style={styles.row}>
+        <Text style={styles.text}>Total Workouts Completed</Text>
+        <Text style={styles.text3}>124</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Total Hours Spent</Text>
+        <Text style={styles.text3}>268</Text>
+      </View>
+      <View style={styles.row}>
+        <Text style={styles.text}>Average Workout Duration</Text>
+        <Text style={styles.text3}>62 min</Text>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  text: {
+    color: '#fff',
+    fontSize: 18,
+    margin: 10,
+    marginVertical: 10,
+    flex: 1,
+  },
+  text2: {
+    color: '#7BBFFF',
+    fontSize: 18,
+    margin: 10,
+  },
+  text3: {
+    color: '#ff3300',
+    fontSize: 18,
+    margin: 10,
   },
   header: {
     fontSize: 32,
@@ -25,17 +83,34 @@ const styles = StyleSheet.create({
     color: '#ff3300',
     marginBottom: 20,
   },
-  text: {
-    color: '#fff',
-    fontSize: 18,
-    marginBottom: 10,
+  header2: {
+    fontSize: 24, 
+    fontWeight: 'bold', 
+    color: '#ff3300',
+    margin: 20, 
   },
   button: {
-    fontSize: 20,
-    textDecorationLine: 'underline',
-    color: '#fff',
+    backgroundColor: '#ff3300',
+    paddingVertical: 10, 
+    paddingHorizontal: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 10,
+    fontWeight: 'bold',
+    fontSize: 20, 
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',  
   },
   iconContainer: {
-    padding: 10, 
+    backgroundColor: '#41474D',
+    padding: 20,
+    borderRadius: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 10,
   },
 });

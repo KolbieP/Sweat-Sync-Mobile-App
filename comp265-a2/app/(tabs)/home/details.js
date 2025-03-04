@@ -1,17 +1,18 @@
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function DetailsScreen() {
 
-  const focused = true;
   const color = '#ff3300';
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.header}>Workout Summary</Text>
       <Text style={styles.text}>Here's a detailed overview of your recent workout sessions.</Text>
+      <View style={styles.iconContainer}><Ionicons name="body" color={color} size={32} /></View>
       <View style={styles.card}>
         <Text style={styles.header2}>Exercises Performed</Text>
-        <Text style={styles.text}>Push-ups, Squats, Deadlifts, Bench Press, Pull-ups</Text>
+        <Text style={styles.text}>Full Body Workout</Text>
       </View>
       <View style={styles.card}>
         <Text style={styles.header2}>Duration and Intensity</Text>
@@ -69,6 +70,14 @@ const styles = StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 18,
+    margin: 10,
+  },
+  iconContainer: {
+    backgroundColor: '#41474D',
+    padding: 10,
+    borderRadius: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
     margin: 10,
   },
 });
