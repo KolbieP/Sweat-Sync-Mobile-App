@@ -8,6 +8,7 @@ export default function ModalScreen() {
       <Image source={logo} style={styles.logo} />
       <Text style={styles.header}>Your seat is reserved!</Text>
       <Text style={styles.header2}>Get ready to sweat it out with Sweat Sync!</Text>
+      <Link href="/(tabs)/workouts/gym/" style={styles.button}>Back</Link>
     </ScrollView>
   );
 }
@@ -19,14 +20,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 20,
-  },
-  card: {
-    backgroundColor: '#41474D',
-    padding: 20,
-    borderRadius: 10,
-    marginVertical: 10,
-    width: '90%',
-    alignItems: 'center',
   },
   header: {
     fontSize: 32,

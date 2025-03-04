@@ -30,10 +30,10 @@ export default function GymScreen() {
             <Text style={styles.header2}>Group Ride</Text>
             <Text style={styles.text}>Monday 3/3</Text>
             <View style={styles.row}>
-              <Text style={styles.text}>5:30am-6:30am</Text>
+              <Text style={styles.text}>5:45am-6:45am</Text>
               <Text style={styles.text}>Heather N.</Text>
             </View>
-            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:30am-6:30am&instructor=Heather%20N." style={styles.button}>Book Now</Link>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:45am-6:45am&instructor=Heather%20N." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Power</Text>

@@ -5,35 +5,29 @@ export default function MyprofileScreen() {
 
   const color = '#ff3300';
 
-  let firstName = 'Alec'
-  let lastName = 'Garner'
-  let birthday = 'January 1 1990'
-  let email = 'alecgarner@gmail.com'
-  let location = 'Preston'
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.header}>My Profile</Text>
       <View style={styles.iconContainer}><Ionicons name="person" color={color} size={80} /></View>
       <View style={styles.row}>
         <Text style={styles.text}>First Name</Text>
-        <Text style={styles.text2}>{firstName}</Text>
+        <Text style={styles.text2}>Alec</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.text}>Last Name</Text>
-        <Text style={styles.text2}>{lastName}</Text>
+        <Text style={styles.text2}>Garner</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.text}>Birthday</Text>
-        <Text style={styles.text2}>{birthday}</Text>
+        <Text style={styles.text2}>January 1 1990</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.text}>Email</Text>
-        <Text style={styles.text2}>{email}</Text>
+        <Text style={styles.text2}>alecgarner@gmail.com</Text>
       </View>
       <View style={styles.row}>
         <Text style={styles.text}>Home Location</Text>
-        <Text style={styles.text2}>{location}</Text>
+        <Text style={styles.text2}>Preston</Text>
       </View>
       <Text style={styles.header2}>Activity Summary:</Text>
       <View style={styles.row}>
