@@ -1,4 +1,5 @@
 import { Text, View, StyleSheet, Switch, ScrollView, Image } from 'react-native';
+import { Link } from 'expo-router';
 import React, {useState} from 'react';
 import logo from '../../../assets/blue-logo.png';
 
@@ -26,28 +27,31 @@ export default function GymScreen() {
       {isEnabled ? (
         <View style={styles.blairmore}> 
           <View style={styles.card}>
-            <Text style={styles.header2}>Group Power</Text>
+            <Text style={styles.header2}>Group Ride</Text>
             <Text style={styles.text}>Monday 3/3</Text>
             <View style={styles.row}>
               <Text style={styles.text}>5:30am-6:30am</Text>
               <Text style={styles.text}>Heather N.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:30am-6:30am&instructor=Heather%20N." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
-            <Text style={styles.header2}>Physique</Text>
+            <Text style={styles.header2}>Group Power</Text>
             <Text style={styles.text}>Monday 3/3</Text>
             <View style={styles.row}>
               <Text style={styles.text}>9:30am-10:30am</Text>
               <Text style={styles.text}>Nichole P.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Power&date=Monday%203/3&time=9:30am-10:30am&instructor=Nichole%20P." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
-            <Text style={styles.header2}>Group R30</Text>
+            <Text style={styles.header2}>Group Yoga</Text>
             <Text style={styles.text}>Monday 3/3</Text>
             <View style={styles.row}>
               <Text style={styles.text}>12:00pm-12:30pm</Text>
               <Text style={styles.text}>Amy F.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Yoga&date=Monday%203/3&time=12:00pm-12:30pm&instructor=Amy%20F." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Ride</Text>
@@ -56,14 +60,16 @@ export default function GymScreen() {
               <Text style={styles.text}>5:30pm-6:30pm</Text>
               <Text style={styles.text}>Shelley H.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:30pm-6:30pm&instructor=Shelley%20H." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
-            <Text style={styles.header2}>Group Zumba</Text>
+            <Text style={styles.header2}>Group Yoga</Text>
             <Text style={styles.text}>Monday 3/3</Text>
             <View style={styles.row}>
               <Text style={styles.text}>7:00pm-8:00pm</Text>
               <Text style={styles.text}>Paula H.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Yoga&date=Monday%203/3&time=7:00pm-8:00pm&instructor=Paula%20H." style={styles.button}>Book Now</Link>
           </View>
         </View>
       ) : (
@@ -75,6 +81,7 @@ export default function GymScreen() {
               <Text style={styles.text}>5:30am-6:30am</Text>
               <Text style={styles.text}>Linda C.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:30am-6:30am&instructor=Linda%20C." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Power</Text>
@@ -83,6 +90,7 @@ export default function GymScreen() {
               <Text style={styles.text}>9:30am-10:30am</Text>
               <Text style={styles.text}>Amy F.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Power&date=Monday%203/3&time=9:30am-10:30am&instructor=Amy%20F." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Ride</Text>
@@ -91,6 +99,7 @@ export default function GymScreen() {
               <Text style={styles.text}>9:30am-10:30am</Text>
               <Text style={styles.text}>Dina R.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=9:30am-10:30am&instructor=Dina%20R." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Ride</Text>
@@ -99,6 +108,7 @@ export default function GymScreen() {
               <Text style={styles.text}>5:30am-6:30am</Text>
               <Text style={styles.text}>Alison F.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Ride&date=Monday%203/3&time=5:30am-6:30am&instructor=Alison%20F." style={styles.button}>Book Now</Link>
           </View>
           <View style={styles.card}>
             <Text style={styles.header2}>Group Yoga</Text>
@@ -107,6 +117,7 @@ export default function GymScreen() {
               <Text style={styles.text}>5:30pm-6:15pm</Text>
               <Text style={styles.text}>Andie V.</Text>
             </View>
+            <Link href="/workouts/groupworkout?groupType=Yoga&date=Monday%203/3&time=5:30pm-6:15pm&instructor=Andie%20V." style={styles.button}>Book Now</Link>
           </View>
         </View>
       )}
@@ -155,5 +166,16 @@ const styles = StyleSheet.create({
   logo: {
     width: 200,
     height: 200,
+  },
+  button: {
+    backgroundColor: '#ff3300',
+    paddingVertical: 10, 
+    paddingHorizontal: 15,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 10,
+    fontWeight: 'bold',
+    fontSize: 20, 
   },
 });
