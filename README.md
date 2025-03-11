@@ -1,3 +1,6 @@
+<p align="center">
+    <img src="comp265-a2/assets/blue-full-logo.png" alt="Sweat Sync Image" width="300">
+</p>
 <h1>Sweat Sync</h1>
 <p><strong>Sweat Sync</strong> is a multi-screen mobile application built with React Native, Expo, and Expo Router. This app allows users to log and track their workouts, providing an intuitive and interactive experience.</p>
 
